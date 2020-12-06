@@ -79,3 +79,6 @@ RUN git clone https://github.com/IshitaTakeshi/lsd_slam_noros.git \
     && make
 
 WORKDIR $WORKSPACE/lsd_slam_noros
+
+ENV SEQUENCE=30
+RUN ./scripts/download_tum_mono.sh
