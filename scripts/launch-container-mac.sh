@@ -14,7 +14,7 @@ echo display number = $display_number
 xhost + $ip
 
 # --privileged for debugging
-docker run -it \
+docker run --rm -it \
     -e DISPLAY=$ip$display_number \
     -e QT_X11_NO_MITSHM=1 \
     --volume="/tmp/.X11-unix:/tmp/.X11-unix:rw" \
